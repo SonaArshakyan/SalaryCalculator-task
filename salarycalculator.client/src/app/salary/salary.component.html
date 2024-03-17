@@ -1,0 +1,31 @@
+
+
+<div class="input-section">
+  <input [formControl]="grossSalaryControl" placeholder="Gross Annual Salary" />
+  <button (click)="calculateSalary()" [disabled]="grossSalaryControl.invalid || loading">Calculate</button>
+</div>
+
+<br />
+
+<table *ngIf="salaryDetails">
+  <thead>
+    <tr>
+      <th>GrossAnnualSalary</th>
+      <th>GrossMonthlySalary</th>
+      <th>NetAnnualSalary</th>
+      <th>NetMonthlySalary</th>
+      <th>AnnualTaxPaid</th>
+      <th>MonthlyTaxPaid</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ salaryDetails.GrossAnnualSalary }}</td>
+      <td>{{ salaryDetails.GrossMonthlySalary }}</td>
+      <td>{{ salaryDetails.NetAnnualSalary }}</td>
+      <td>{{ salaryDetails.NetMonthlySalary }}</td>
+      <td>{{ salaryDetails.AnnualTaxPaid }}</td>
+      <td>{{ salaryDetails.MonthlyTaxPaid }}</td>
+    </tr>
+  </tbody>
+</table>

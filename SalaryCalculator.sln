@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryCalculator.Server", "SalaryCalculator.Server\SalaryCalculator.Server.csproj", "{8122E6DE-ACD2-4EBA-8F44-3DAAF1DD86AB}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "salarycalculator.client", "salarycalculator.client\salarycalculator.client.esproj", "{8FBDB69D-883A-47F5-A782-A9C430C3E19C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalaryCalculator.Server.UnitTests", "SalaryCalculator.Server.UnitTests\SalaryCalculator.Server.UnitTests.csproj", "{AE76DAC1-3551-42A2-BDB5-4E11109A7242}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8122E6DE-ACD2-4EBA-8F44-3DAAF1DD86AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8122E6DE-ACD2-4EBA-8F44-3DAAF1DD86AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8122E6DE-ACD2-4EBA-8F44-3DAAF1DD86AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8122E6DE-ACD2-4EBA-8F44-3DAAF1DD86AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FBDB69D-883A-47F5-A782-A9C430C3E19C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FBDB69D-883A-47F5-A782-A9C430C3E19C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FBDB69D-883A-47F5-A782-A9C430C3E19C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8FBDB69D-883A-47F5-A782-A9C430C3E19C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FBDB69D-883A-47F5-A782-A9C430C3E19C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FBDB69D-883A-47F5-A782-A9C430C3E19C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{AE76DAC1-3551-42A2-BDB5-4E11109A7242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE76DAC1-3551-42A2-BDB5-4E11109A7242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE76DAC1-3551-42A2-BDB5-4E11109A7242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE76DAC1-3551-42A2-BDB5-4E11109A7242}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A62D3BA-044D-4098-9B76-A66861B93ADA}
+	EndGlobalSection
+EndGlobal
