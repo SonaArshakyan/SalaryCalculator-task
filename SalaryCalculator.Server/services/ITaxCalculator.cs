@@ -4,5 +4,5 @@ namespace SalaryCalculator.Server.services;
 
 public interface ITaxCalculator
 {
-    public SalaryDetails CalculateSalaryDetails(double income);
+    public SalaryDetails CalculateSalaryDetails(decimal income);
 }

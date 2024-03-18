@@ -14,7 +14,7 @@ public class SalaryController : ControllerBase
     }
 
     [HttpPost("calculate")]
-    public IActionResult CalculateSalary([FromBody] double grossAnnualSalary)
+    public IActionResult CalculateSalary([FromBody] decimal grossAnnualSalary)
     {
         try
         {

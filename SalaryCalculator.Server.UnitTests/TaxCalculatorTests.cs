@@ -16,7 +16,7 @@ public class TaxCalculatorTests
     [TestMethod]
     public void CalculateSalaryDetails_WhenIncomeIs5000_ReturnsCorrectSalaryDetails()
     {
-        double income = 5000;
+        decimal income = 5000;
 
         var result = _taxCalculator.CalculateSalaryDetails(income);
 
@@ -31,7 +31,7 @@ public class TaxCalculatorTests
     [TestMethod]
     public void CalculateSalaryDetails_WhenIncomeIs10000_ReturnsCorrectSalaryDetails()
     {
-        double income = 10000;
+        decimal income = 10000;
 
         var result = _taxCalculator.CalculateSalaryDetails(income);
 
