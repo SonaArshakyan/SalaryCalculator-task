@@ -5,39 +5,38 @@ namespace SalaryCalculator.Server.UnitTests;
 [TestClass]
 public class TaxCalculatorTests
 {
-    [TestMethod]
-    public void CalculateTax_WhenIncomeIsBelowBandA_ShouldTaxAtZeroPercent()
+    private TaxCalculator _taxCalculator;
+
+    [TestInitialize]
+    public void TestInitialize()
     {
-        
-        var income = 4000;
-        var expectedTax = 0;
-        
-        var result = TaxCalculator.CalculateTax(income);
-        
-        Assert.AreEqual(expectedTax, result.AnnualTaxPaid);
+        _taxCalculator = new TaxCalculator();
     }
 
     [TestMethod]
-    public void CalculateTax_WhenIncomeIsWithinBandB_ShouldTaxAtTwentyPercent()
+    public void CalculateSalaryDetails_WhenIncomeIs5000_ReturnsCorrectSalaryDetails()
     {
-        
-        var income = 8000;
-        var expectedTax = 600;
-        
-        var result = TaxCalculator.CalculateTax(income);
-        
-        Assert.AreEqual(expectedTax, result.AnnualTaxPaid);
+        double income = 5000;
+
+        var result = _taxCalculator.CalculateSalaryDetails(income);
+
+        Assert.AreEqual(income, result.GrossAnnualSalary);
+        Assert.AreEqual(income / 12, result.GrossMonthlySalary);
+        Assert.AreEqual(income, result.NetAnnualSalary);
+        Assert.AreEqual(income / 12, result.NetMonthlySalary);
+        Assert.AreEqual(0, result.AnnualTaxPaid);
+        Assert.AreEqual(0, result.MonthlyTaxPaid);
     }
 
     [TestMethod]
-    public void CalculateTax_WhenIncomeIsAboveBandB_ShouldTaxAtFortyPercentForBandC()
+    public void CalculateSalaryDetails_WhenIncomeIs10000_ReturnsCorrectSalaryDetails()
     {
-        
-        var income = 12000;
-        var expectedTax = 1800; 
-        
-        var result = TaxCalculator.CalculateTax(income);
-        
-        Assert.AreEqual(expectedTax, result.AnnualTaxPaid);
+        double income = 10000;
+
+        var result = _taxCalculator.CalculateSalaryDetails(income);
+
+        Assert.AreEqual(income, result.GrossAnnualSalary);
+        Assert.AreEqual(income / 12, result.GrossMonthlySalary);
+        Assert.AreEqual(1000, result.AnnualTaxPaid);
     }
 }

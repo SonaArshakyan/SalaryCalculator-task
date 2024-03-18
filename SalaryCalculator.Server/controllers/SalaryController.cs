@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using SalaryCalculator.Server.services;
 
 namespace SalaryCalculator.Server.controllers;
@@ -8,8 +7,10 @@ namespace SalaryCalculator.Server.controllers;
 [Route("api/[controller]")]
 public class SalaryController : ControllerBase
 {
-    public SalaryController()
+    private  ITaxCalculator taxCalculator;
+    public SalaryController(ITaxCalculator taxCalculator)
     {
+        this.taxCalculator = taxCalculator;
     }
 
     [HttpPost("calculate")]
@@ -17,7 +18,7 @@ public class SalaryController : ControllerBase
     {
         try
         {
-            var result = TaxCalculator.CalculateTax(grossAnnualSalary);
+            var result = taxCalculator.CalculateSalaryDetails(grossAnnualSalary);
             return Ok(new { result });
         }
         catch (Exception ex)

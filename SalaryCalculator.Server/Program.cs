@@ -1,8 +1,11 @@
+using SalaryCalculator.Server.services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMvc();
+builder.Services.AddScoped<ITaxCalculator,TaxCalculator>();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("allowAll",
@@ -28,8 +31,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-
 
 app.UseRouting();
 app.UseEndpoints(endpoints =>

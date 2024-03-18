@@ -38,7 +38,6 @@ export class SalaryComponent {
     let salary = Number(this.grossSalaryControl.value);
     this.http.post<any>(url, salary).subscribe(
       (response) => {
-        console.log('Response:', response);
         if (response && response.result) {
           this.salaryDetails = {
             GrossAnnualSalary: response.result.grossAnnualSalary,
