@@ -5,7 +5,7 @@ namespace SalaryCalculator.Server.services;
 public class TaxCalculator : ITaxCalculator
 {
     private readonly double bandAUpperLimit = 5000;
-    private readonly  double bandBUpperLimit = 10000;
+    private readonly  double bandBUpperLimit = 20000;
     private readonly double bandBRate = 0.20;
     private readonly double bandCRate = 0.40;
     public  SalaryDetails CalculateSalaryDetails(double income)
